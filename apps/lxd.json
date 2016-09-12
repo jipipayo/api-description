@@ -1,0 +1,25 @@
+{
+   "name" : "LXD API",
+   "authority" : "GITHUB:jipipayo",
+   "formats" : [
+      "json"
+   ],   
+   "version" : "1.0",
+ 
+   "methods" :{
+            "get_list_endpoints" : {
+                "path" : "/",
+                "description" : "Returns a list of supported API endpoint URLs",
+                "authentication" : false,
+                "method"  : "GET",
+                "expected_status":  [200]
+            },
+            "get_config_and_env" : {
+                "path" : "/1.0/",
+                "description" : "Returns the server configuration and environment information",
+                "authentication" : false,
+                "method"  : "GET",
+                "expected_status":  [200]
+            },
+    }
+}
