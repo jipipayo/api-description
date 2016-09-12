@@ -3,13 +3,13 @@
    "authority" : "GITHUB:jipipayo",
    "formats" : [
       "json"
-   ],   
+   ],
    "version" : "1.0",
- 
+
    "methods" :{
-            "get_list_endpoints" : {
+            "get_list_versions" : {
                 "path" : "/",
-                "description" : "Returns a list of supported API endpoint URLs",
+                "description" : "Returns a list of API versions supported, just '1.0' by default",
                 "authentication" : false,
                 "method"  : "GET",
                 "expected_status":  [200]
@@ -28,11 +28,25 @@
                 "method"  : "PUT",
                 "expected_status":  [200]
             },
-            "patch_config" : {
+            "update_config" : {
                 "path" : "/1.0/",
                 "description" : "Updates the server configuration or other properties",
                 "authentication" : true,
                 "method"  : "PATCH",
+                "expected_status":  [200]
+            },
+            "get_list_certificates" : {
+                "path" : "/1.0/certificates",
+                "description" : "Get list of trusted certificates",
+                "authentication" : true,
+                "method"  : "GET",
+                "expected_status":  [200]
+            },
+            "add_certificate" : {
+                "path" : "/1.0/certificates",
+                "description" : "Add a new trusted certificate",
+                "authentication" : true,
+                "method"  : "GET",
                 "expected_status":  [200]
             },
     }
