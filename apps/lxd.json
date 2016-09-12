@@ -14,11 +14,25 @@
                 "method"  : "GET",
                 "expected_status":  [200]
             },
-            "get_config_and_env" : {
+            "get_config" : {
                 "path" : "/1.0/",
                 "description" : "Returns the server configuration and environment information",
-                "authentication" : false,
+                "authentication" : [false, true],
                 "method"  : "GET",
+                "expected_status":  [200]
+            },
+            "save_config" : {
+                "path" : "/1.0/",
+                "description" : "Replaces the server configuration or other properties",
+                "authentication" : true,
+                "method"  : "PUT",
+                "expected_status":  [200]
+            },
+            "patch_config" : {
+                "path" : "/1.0/",
+                "description" : "Updates the server configuration or other properties",
+                "authentication" : true,
+                "method"  : "PATCH",
                 "expected_status":  [200]
             },
     }
